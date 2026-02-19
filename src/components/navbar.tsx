@@ -78,7 +78,7 @@ export function Navbar() {
               aria-label="Cambiar tema"
             >
               {theme === "dark" ? (
-                <Sun size={20} className="text-accent" />
+                <Sun size={20} className="text-primary" />
               ) : (
                 <Moon size={20} className="text-primary" />
               )}
