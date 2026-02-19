@@ -1,3 +1,5 @@
+import '../../src/assets/leon.jpg'
+
 export function About() {
   const stats = [
     { value: "6+", label: "Proyectos completados" },
@@ -18,65 +20,34 @@ export function About() {
                 Sobre mí
               </p>
               <h2 className="text-4xl font-bold">
-                Desarrollador apasionado por crear soluciones
+                Construyendo y aprendiendo
               </h2>
             </header>
 
             <div className="space-y-4 leading-relaxed text-muted-foreground">
-              <p>
-                Soy desarrollador full-stack enfocado en aplicaciones modernas y escalables.
-                Trabajo en fintech, gaming y análisis de datos, transformando requisitos
-                complejos en código limpio y eficiente.
-              </p>
-
-              <p>
-                Prioritizo experiencia de usuario y rendimiento. Cada decisión técnica
-                busca equilibrio entre arquitectura sólida y usabilidad.
-              </p>
-
-              <p>
-                Disfruto explorar nuevas tecnologías, contribuir a open source
-                y mantener aprendizaje continuo.
-              </p>
+                <p>
+                Estoy formándome como desarrollador a través de proyectos propios, creando y mejorando con cada versión.
+                </p> 
+                <p>
+                 Ahora busco dar el siguiente paso y ganar experiencia en una empresa donde pueda seguir desarrollándome.
+                </p>
             </div>
 
-            {/* Estadísticas */}
-            <div className="grid grid-cols-3 gap-6 border-t border-border pt-6">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-3xl font-bold text-primary">
-                    {stat.value}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+
           </div>
 
-          {/* Decoración */}
-          <aside className="relative h-80 overflow-hidden rounded-2xl border border-border">
-            
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-card to-accent/10 transition-colors" />
+            <aside className="relative order-1 md:order-2 flex justify-center">
+            <div className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-2xl border border-border shadow-lg">
+                
+                <img
+                src="../../src/assets/leon.jpg"
+                alt="Castañeda Vega Luis"
+                className="h-full w-full object-cover"
+                />
 
-            <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl opacity-60" />
-            <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-accent/20 blur-3xl opacity-60" />
-
-            <div className="relative z-10 flex h-full flex-col items-center justify-center text-center px-6 space-y-4">
-              <span className="text-6xl">⚡</span>
-
-              <div>
-                <p className="text-xl font-bold text-foreground">
-                  Innovación & Calidad
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Transformando ideas en código que importa
-                </p>
-              </div>
             </div>
+            </aside>
 
-          </aside>
 
         </div>
       </div>
