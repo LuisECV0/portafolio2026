@@ -77,7 +77,6 @@ export function Projects() {
     <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-card/50">
       <div className="max-w-5xl mx-auto">
 
-        {/* Header */}
         <div className="text-center mb-16 space-y-4">
           <p className="text-accent text-sm font-semibold uppercase tracking-wider">
             Portfolio
@@ -87,7 +86,6 @@ export function Projects() {
           </h2>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {filteredProjects.map((project) => (
             <div
@@ -102,7 +100,6 @@ export function Projects() {
               `}
             >
 
-              {/* Imagen */}
               <div className="relative w-full h-52 overflow-hidden bg-muted">
                 <img
                   src={project.image}
@@ -114,7 +111,6 @@ export function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               </div>
 
-              {/* Contenido */}
               <div className="p-6 space-y-4 flex flex-col">
 
                 <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
@@ -125,7 +121,6 @@ export function Projects() {
                   {project.description}
                 </p>
 
-                {/* Tech */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
@@ -141,7 +136,6 @@ export function Projects() {
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex gap-3 pt-4 border-t border-border/50">
                   {project.github && (
                     <Button asChild variant="ghost" size="sm" className="flex-1 text-xs">
@@ -171,7 +165,6 @@ export function Projects() {
                 </div>
               </div>
 
-              {/* Badge destacado */}
               {project.highlight && (
                 <div className="absolute top-4 right-4 
                                 bg-accent/90 text-accent-foreground 

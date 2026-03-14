@@ -42,52 +42,26 @@ function SkillCategory({ title, skills, icon }: SkillCategoryProps) {
 
 export function Skills() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-card/50 to-background">
-      <div className="max-w-6xl mx-auto space-y-16">
+    <section 
+      id="skills" 
 
+      className="relative min-h-screen flex items-center py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-card/50 to-background"
+    >
+      <div className="max-w-6xl mx-auto w-full space-y-16">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-bold">
             Stack & Tecnologías
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
             Tecnologías que utilizo y practico en mis proyectos personales.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
 
-          <SkillCategory
-            title="Frontend"
-            icon={<Code2 className="w-5 h-5" />}
-            skills={[
-              'React',
-              'Next.js',
-              'TypeScript',
-              'Tailwind CSS'
-            ]}
-          />
-
-          <SkillCategory
-            title="Backend"
-            icon={<Server className="w-5 h-5" />}
-            skills={[
-              'Node.js',
-              'Express',
-              'REST APIs'
-            ]}
-          />
-
-          <SkillCategory
-            title="Bases de Datos & Otros"
-            icon={<Database className="w-5 h-5" />}
-            skills={[
-              'PostgreSQL',
-              'MongoDB',
-              'Git',
-              'Docker (básico)'
-            ]}
-          />
-
+          <SkillCategory title="Frontend" icon={<Code2 className="w-5 h-5" />} skills={['React', 'Next.js', 'TypeScript', 'Tailwind CSS']} />
+          <SkillCategory title="Backend" icon={<Server className="w-5 h-5" />} skills={['Node.js', 'Express', 'REST APIs']} />
+          <SkillCategory title="Bases de Datos" icon={<Database className="w-5 h-5" />} skills={['PostgreSQL', 'MongoDB', 'Git', 'Docker']} />
         </div>
       </div>
     </section>
