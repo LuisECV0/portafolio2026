@@ -78,7 +78,7 @@ const projectsData: Project[] = [
 ]
 
 export function Projects() {
-  const [filter, setFilter] = useState('todos')
+  const [filter] = useState('todos')
 
   const filteredProjects =
     filter === 'todos'

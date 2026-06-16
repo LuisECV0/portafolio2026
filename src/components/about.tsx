@@ -1,11 +1,5 @@
 
 export function About() {
-  const stats = [
-    { value: "6+", label: "Proyectos completados" },
-    { value: "2+", label: "Años de experiencia" },
-    { value: "15+", label: "Tecnologías dominadas" },
-  ]
-
   return (
     <section
       id="about"
