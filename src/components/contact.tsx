@@ -1,12 +1,11 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Github, Linkedin } from "lucide-react"
 import Swal from "sweetalert2"
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/LuisECV0", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/luis-castañeda-vega", label: "LinkedIn" },
 ]
 
 export function Contact() {
@@ -88,11 +87,10 @@ export function Contact() {
       >
         <div className="text-center mb-14 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-            Construyamos algo{" "}
-            <span className="text-primary">increíble</span>
+            Contacto
           </h2>
           <p className="text-muted-foreground mt-4 text-base md:text-lg">
-            Cuéntame tu idea y la transformamos en una solución real.
+            Envíame un mensaje.
           </p>
         </div>
 
@@ -163,7 +161,7 @@ export function Contact() {
                 <span className="font-semibold">Disponible actualmente</span>
               </div>
               <p className="text-muted-foreground text-sm md:text-base">
-                Abierto a proyectos freelance, colaboraciones y oportunidades full-time.
+                Abierto a proyectos freelance y oportunidades full-time.
               </p>
             </div>
 
@@ -175,7 +173,7 @@ export function Contact() {
                     Email directo
                   </p>
                   <p className="font-medium">
-                    hola@ejemplo.com
+                    luiscv1719@gmail.com
                   </p>
                 </div>
               </div>

@@ -15,13 +15,20 @@ export function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">("dark")
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+
     window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => window.removeEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   useEffect(() => {
     const root = document.documentElement
+
     if (theme === "dark") {
       root.classList.add("dark")
     } else {
@@ -31,9 +38,9 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border/40 shadow-sm"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled || isOpen
+          ? "bg-background/40 backdrop-blur-xl border-b border-border/20"
           : "bg-transparent"
       }`}
     >
@@ -42,9 +49,13 @@ export function Navbar() {
 
           <a
             href="#home"
-            className="text-2xl font-black tracking-tight hover:opacity-80 transition-opacity"
+            className="flex items-center hover:opacity-80 transition-opacity"
           >
-            Dev<span className="text-primary">.</span>
+            <img
+              src="../../src/assets/luis.png"
+              alt="LUISCV logo"
+              className="h-30 w-auto object-contain"
+            />
           </a>
 
           <div className="hidden md:flex items-center gap-10">
@@ -76,28 +87,32 @@ export function Navbar() {
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
+
           </div>
         </div>
+      </div>
 
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isOpen ? "max-h-60 opacity-100 py-4" : "max-h-0 opacity-0"
-          }`}
-        >
-          <div className="flex flex-col gap-4">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          isOpen
+            ? "max-h-96 opacity-100"
+            : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-6">
+          <div className="flex flex-col gap-6">
             {NAV_ITEMS.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-lg font-medium"
+                className="text-lg font-medium text-foreground hover:text-primary transition-colors"
               >
                 {item.name}
               </a>
             ))}
           </div>
         </div>
-
       </div>
     </nav>
   )

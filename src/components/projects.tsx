@@ -21,48 +21,60 @@ const projectsData: Project[] = [
     id: 1,
     title: 'Landing Page Hacienda Montalbán',
     description:
-      'Landing profesional para propiedad rural con galería optimizada y formulario funcional.',
+      'Landing promocional para una hacienda, con galería de imágenes, información de servicios y formulario de contacto.',
     technologies: ['React', 'Vite', 'Tailwind CSS'],
-    image: '../../src/assets/fondo.png',
+    image: '../../src/assets/landing.webp',
     status: 'Completado',
     highlight: true,
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/LuisECV0/Landing',
+    demo: 'https://hacienda-montalvan.pages.dev/',
   },
-  {
+    {
     id: 2,
-    title: 'Simulador Financiero',
+    title: 'Steam Lens',
     description:
-      'Simulador para proyectar escenarios de gasto con gráficos interactivos y exportación PDF.',
-    technologies: ['React', 'TypeScript', 'Chart.js'],
-    image: '../../src/assets/fondo.png',
+      'Analizador de perfiles Steam que muestra estadísticas de juegos, actividad y datos obtenidos desde la API de Steam.',
+    technologies: ['React', 'Node.js', 'PostgreSQL'],
+    image:'../../src/assets/steam1.webp',
     status: 'Completado',
-    highlight: true,
-    github: '#',
-    demo: '#',
+    github: 'https://github.com/LuisECV0/SteamLens',
+    demo: 'https://steam-lens.vercel.app/',
   },
   {
     id: 3,
-    title: 'Steam Lens',
+    title: 'Simulador Financiero',
     description:
-      'Analizador de perfiles Steam con estadísticas detalladas e integración API.',
-    technologies: ['React', 'Node.js', 'PostgreSQL'],
-    image:'../../src/assets/fondo.png',
+      'Aplicación para analizar ingresos y gastos mediante gráficos interactivos y proyecciones financieras.',
+    technologies: ['React', 'TypeScript', 'Chart.js'],
+    image: '../../src/assets/financiero.webp',
     status: 'Completado',
-    github: '#',
-    demo: '#',
+    highlight: true,
+    github: 'https://github.com/LuisECV0/Projection-Wallet',
+    demo: 'https://projection-wallet.vercel.app/',
   },
+
   {
     id: 4,
     title: 'OCR Web App',
     description:
-      'Aplicación OCR que convierte imágenes en texto editable con soporte multilenguaje.',
+      'Herramienta para convertir el texto de una imagen en texto editable y reutilizable.',
     technologies: ['React', 'Tesseract.js'],
-    image:'../../src/assets/fondo.png',
+    image:'../../src/assets/ocr.webp',
     status: 'Completado',
     github: '#',
-    demo: '#',
+    demo: 'https://ocr-beta-eight.vercel.app/',
   },
+  {
+  id: 5,
+  title: 'Sistema de Login',
+  description:
+    'Sistema de autenticación que permite el registro e inicio de sesión de usuarios mediante validación de credenciales y gestión básica de sesiones.',
+  technologies: [ 'PHP', 'MySQL','CSS', 'JavaScript'],
+  image: 'https://i.ibb.co/KxP5FXQ/p4-min.png',
+  status: 'Completado',
+  github: 'https://github.com/LuisECV0/login-php',
+  demo: '#',
+},
 ]
 
 export function Projects() {
@@ -78,9 +90,6 @@ export function Projects() {
       <div className="max-w-5xl mx-auto">
 
         <div className="text-center mb-16 space-y-4">
-          <p className="text-accent text-sm font-semibold uppercase tracking-wider">
-            Portfolio
-          </p>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Proyectos Destacados
           </h2>
@@ -123,16 +132,22 @@ export function Projects() {
 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs px-2.5 py-1 
-                                 bg-accent/10 
-                                 text-accent 
-                                 rounded-full 
-                                 border border-accent/20"
-                    >
-                      {tech}
-                    </span>
+                  <span
+                    key={tech}
+                    className="
+                      text-xs font-medium
+                      px-3 py-1
+                      rounded-full
+                      bg-zinc-800/80
+                      text-zinc-200
+                      border border-zinc-700/60
+                      shadow-sm
+                      backdrop-blur-sm
+                      transition-all duration-300
+                      hover:bg-zinc-700/80"
+                  >
+                    {tech}
+                  </span>
                   ))}
                 </div>
 
