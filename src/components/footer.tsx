@@ -1,26 +1,8 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
-
-  const footerLinks = [
-    {
-      category: "Navegación",
-      links: [
-        { name: "Inicio", href: "#home" },
-        { name: "Sobre mí", href: "#about" },
-        { name: "Skills", href: "#skills" },
-      ],
-    },
-    {
-      category: "Proyectos",
-      links: [
-        { name: "Portafolio", href: "#projects" },
-        { name: "Contacto", href: "#contact" },
-      ],
-    },
-  ]
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/LuisECV0", label: "GitHub - Castañeda Vega Luis" },
