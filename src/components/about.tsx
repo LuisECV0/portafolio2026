@@ -1,4 +1,4 @@
-
+import { Eye } from "lucide-react"
 import luisCV from "../assets/luisCV.png"
 
 export function About() {
@@ -10,6 +10,7 @@ export function About() {
       <div className="mx-auto max-w-6xl w-full">
         <div className="grid items-center gap-12 md:grid-cols-2 lg:gap-16">
 
+          {/* Texto */}
           <div className="space-y-8 animate-fade-in">
             <header className="space-y-2">
               <p className="text-sm font-semibold uppercase tracking-wide text-primary">
@@ -32,8 +33,33 @@ export function About() {
                 donde pueda seguir desarrollándome.
               </p>
             </div>
+
+            {/* CV Button */}
+            <div className="pt-2">
+              <a
+                href="/cv-luis-castaneda.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex items-center gap-2
+                  px-5 py-2.5
+                  rounded-xl
+                  bg-primary
+                  text-primary-foreground
+                  font-medium
+                  shadow-md
+                  hover:bg-primary/90
+                  transition-all duration-300
+                  w-fit
+                "
+              >
+                <Eye className="w-4 h-4" />
+                Ver CV
+              </a>
+            </div>
           </div>
 
+          {/* Imagen */}
           <aside className="relative flex justify-center">
             <div className="relative h-72 w-72 md:h-96 md:w-96 overflow-hidden rounded-2xl border border-border shadow-2xl">
               <img
