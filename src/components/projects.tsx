@@ -6,7 +6,7 @@ import { Button } from './ui/button'
 import landingImg from '../assets/landing.webp'
 import steamImg from '../assets/steam1.webp'
 import financieroImg from '../assets/financiero.webp'
-import ocrImg from '../assets/ocr.webp'
+import ocrImg from '../assets/ocr1.webp'
 
 interface Project {
   id: number
@@ -65,7 +65,7 @@ const projectsData: Project[] = [
     technologies: ['React', 'Tesseract.js'],
     image: ocrImg,
     status: 'Completado',
-    github: '#',
+    github: 'github.com/LuisECV0/ocr',
     demo: 'https://ocr-beta-eight.vercel.app/',
   },
   {
