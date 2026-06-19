@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react'
 import { Button } from './ui/button'
+import landingImg from '../assets/landing.webp'
+import steamImg from '../assets/steam1.webp'
+import financieroImg from '../assets/financiero.webp'
+import ocrImg from '../assets/ocr.webp'
 
 interface Project {
   id: number
@@ -23,7 +27,7 @@ const projectsData: Project[] = [
     description:
       'Landing promocional para una hacienda, con galería de imágenes, información de servicios y formulario de contacto.',
     technologies: ['React', 'Vite', 'Tailwind CSS'],
-    image: '../../src/assets/landing.webp',
+    image: landingImg,
     status: 'Completado',
     highlight: true,
     github: 'https://github.com/LuisECV0/Landing',
@@ -35,7 +39,7 @@ const projectsData: Project[] = [
     description:
       'Analizador de perfiles Steam que muestra estadísticas de juegos, actividad y datos obtenidos desde la API de Steam.',
     technologies: ['React', 'Node.js', 'PostgreSQL'],
-    image:'../../src/assets/steam1.webp',
+    image: steamImg,
     status: 'Completado',
     github: 'https://github.com/LuisECV0/SteamLens',
     demo: 'https://steam-lens.vercel.app/',
@@ -46,7 +50,7 @@ const projectsData: Project[] = [
     description:
       'Aplicación para analizar ingresos y gastos mediante gráficos interactivos y proyecciones financieras.',
     technologies: ['React', 'TypeScript', 'Chart.js'],
-    image: '../../src/assets/financiero.webp',
+    image: financieroImg,
     status: 'Completado',
     highlight: true,
     github: 'https://github.com/LuisECV0/Projection-Wallet',
@@ -59,7 +63,7 @@ const projectsData: Project[] = [
     description:
       'Herramienta para convertir el texto de una imagen en texto editable y reutilizable.',
     technologies: ['React', 'Tesseract.js'],
-    image:'../../src/assets/ocr.webp',
+    image: ocrImg,
     status: 'Completado',
     github: '#',
     demo: 'https://ocr-beta-eight.vercel.app/',
@@ -73,7 +77,7 @@ const projectsData: Project[] = [
   image: 'https://i.ibb.co/KxP5FXQ/p4-min.png',
   status: 'Completado',
   github: 'https://github.com/LuisECV0/login-php',
-  demo: '#',
+  demo: 'https://github.com/LuisECV0/login-php',
 },
 ]
 

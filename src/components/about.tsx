@@ -1,4 +1,6 @@
 
+import luisCV from "../assets/luisCV.png"
+
 export function About() {
   return (
     <section
@@ -35,7 +37,7 @@ export function About() {
           <aside className="relative flex justify-center">
             <div className="relative h-72 w-72 md:h-96 md:w-96 overflow-hidden rounded-2xl border border-border shadow-2xl">
               <img
-                src="../../src/assets/luisCV.png"
+                src={luisCV}
                 alt="Castañeda Vega Luis"
                 className="h-full w-full object-cover object-top transition-transform duration-500 hover:scale-110"
               />
